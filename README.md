@@ -30,7 +30,7 @@ Stobix Auto Bot is an automated tool designed to interact with the Stobix platfo
 1. Clone the repository:
 
 ```bash
-git https://github.com/bronkdrop/Stobix-Auto-Bot.git
+git clone https://github.com/bronkdrop/Stobix-Auto-Bot.git
 cd Stobix-Auto-Bot
 ```
 
